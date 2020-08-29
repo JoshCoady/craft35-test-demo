@@ -1,0 +1,7 @@
+handle: entrytype1
+hasTitleField: true
+name: 'Entry Type 1'
+section: uid-section-1
+sortOrder: 1
+titleFormat: ''
+titleLabel: ''

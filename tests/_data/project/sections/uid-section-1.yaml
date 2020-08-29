@@ -1,0 +1,11 @@
+enableVersioning: false
+handle: section1
+name: 'Section 1'
+propagationMethod: none
+siteSettings:
+  uid-site-1:
+    enabledByDefault: true
+    hasUrls: true
+    template: null
+    uriFormat: null
+type: channel

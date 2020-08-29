@@ -1,0 +1,8 @@
+baseUrl: '@web/'
+handle: site1
+hasUrls: true
+language: en-US
+name: 'Site 1'
+primary: true
+siteGroup: uid-sitegroup-1
+sortOrder: 1

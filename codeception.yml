@@ -15,7 +15,7 @@ modules:
     \craft\test\Craft:
       configFile: 'tests/_craft/config/test.php'
       entryUrl: 'https://test.craftcms.test/index.php'
-      projectConfig: {file: 'tests/_data/project.yaml'}
+      projectConfig: {folder: 'tests/_data/project'}
       migrations: []
       plugins: []
       cleanup: true
