@@ -1,0 +1,25 @@
+{
+  "require": {
+    "craftcms/cms": "3.4.30",
+    "vlucas/phpdotenv": "^3.4.0"
+  },
+  "require-dev": {
+    "codeception/codeception": "^4.1",
+    "codeception/module-asserts": "^1.2",
+    "codeception/module-yii2": "^1.1",
+    "yiisoft/yii2-shell": "^2.0.3"
+  },
+  "config": {
+    "sort-packages": true,
+    "optimize-autoloader": true,
+    "platform": {
+      "php": "7.4"
+    }
+  },
+  "scripts": {
+    "test": [
+      "Composer\\Config::disableProcessTimeout",
+      "@php vendor/bin/codecept run "
+    ]
+  }
+}

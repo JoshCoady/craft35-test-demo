@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+
+  app:
+    build: .
+    entrypoint: sh test.sh
+    links:
+      - db
+    environment:
+      DB_DSN: "mysql:host=db;port=3306;dbname=craft;"
+      DB_USER: root
+      DB_PASSWORD: rootpass
+      DB_TABLE_PREFIX: craft_
+      SECURITY_KEY: "abcdefghijklmnopqrstuvwxyz0123456789"
+
+  db:
+    image: mariadb:10.3
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpass
+      MYSQL_DATABASE: craft
