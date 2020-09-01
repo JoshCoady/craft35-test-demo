@@ -3,6 +3,7 @@
 use Craft;
 use craft\base\Element;
 use craft\elements\Entry;
+use craft\elements\User;
 use craft\helpers\ElementHelper;
 
 /**
@@ -21,7 +22,7 @@ class SmokeTest extends \Codeception\Test\Unit {
         $entry->typeId = $section->getEntryTypes()[0]->id;
         $entry->slug = ElementHelper::tempSlug();
         $entry->setScenario(Element::SCENARIO_ESSENTIALS);
-        self::assertTrue(Craft::$app->getElements()->saveElement($entry));
+        self::assertTrue(Craft::$app->getDrafts()->saveElementAsDraft($entry, User::find()->admin()->one()->id));
     }
 
 }
